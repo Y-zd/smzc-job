@@ -5,16 +5,13 @@
     <parent>
         <artifactId>job</artifactId>
         <groupId>com.smzc.job</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>2.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mall-executor</artifactId>
+    <artifactId>plan-b-executor-demo</artifactId>
     <packaging>war</packaging>
     <name>${project.artifactId}</name>
-
-
-
     <dependencies>
         <!-- spring-webmvc -->
         <dependency>
@@ -38,29 +35,20 @@
         </dependency>
 
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>2.5.10</version>
-        </dependency>
-        <dependency>
-            <groupId>com.101tec</groupId>
-            <artifactId>zkclient</artifactId>
-            <version>0.10</version>
-        </dependency>
-
-        <dependency>
-            <artifactId>mall-service</artifactId>
+            <artifactId>mall-persistence</artifactId>
             <groupId>com.smzc</groupId>
-            <version>2.0-SNAPSHOT</version>
+            <version>${project.parent.version}</version>
         </dependency>
-    </dependencies>
+        <dependency>
+            <artifactId>mall-domain</artifactId>
+            <groupId>com.smzc</groupId>
+            <version>${project.parent.version}</version>
+        </dependency>
+      </dependencies>
+
 
     <build>
-        <finalName>mall-executor</finalName>
-        <filters>
-            <!--suppress UnresolvedMavenProperty -->
-            <filter>src/main/resources/config/${profile-name}.properties</filter>
-        </filters>
+        <finalName>plan-b-executor-demo</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -73,11 +61,10 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <configuration>
                     <path>/</path>
-                    <port>8081</port>
+                    <port>8082</port>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 
 </project>

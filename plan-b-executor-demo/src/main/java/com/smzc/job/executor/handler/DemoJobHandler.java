@@ -1,14 +1,13 @@
-package com.xxl.job.executor.service.jobhandler;
+package com.smzc.job.executor.handler;
 
 
-import com.smzc.service.ConsumerCardInfoService;
+import com.smzc.job.service.ConsumerCardInfoManager;
 import com.xxl.job.core.biz.model.ReturnT;
 import com.xxl.job.core.handler.IJobHandler;
 import com.xxl.job.core.handler.annotation.JobHandler;
 import com.xxl.job.core.log.XxlJobLogger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.Resource;
 
 /**
  * 任务Handler示例（Bean模式）
@@ -25,13 +24,15 @@ import javax.annotation.Resource;
 @Component
 public class DemoJobHandler extends IJobHandler {
 
-
-    @Resource
-    private ConsumerCardInfoService consumerCardInfoService;
+    @Autowired
+    private ConsumerCardInfoManager consumerCardInfoManager;
 
     @Override
     public ReturnT<String> execute(String param) throws Exception {
-        XxlJobLogger.log("XXL-JOB, Hello World." + consumerCardInfoService.findConsumerCardList().get(0).toString());
+
+
+        XxlJobLogger.log("XXL-JOB, plan b demo result:" + consumerCardInfoManager.getById(1L).toString());
+
         return SUCCESS;
     }
 
