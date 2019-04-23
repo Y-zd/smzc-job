@@ -17,7 +17,7 @@ smzc任务调度中心
     
     方案一的demo,与dubbo结合
 
-* [plan-b-executor-demo(调度中心方案一执行器demo)](/plan-b-executor-demo)
+* [plan-b-executor-demo(调度中心方案二执行器demo)](/plan-b-executor-demo)
     
     方案二的demo,需要在各模块单独写自己的执行器注册到任务调度中心
     
