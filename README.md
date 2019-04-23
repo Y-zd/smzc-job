@@ -16,12 +16,15 @@ smzc任务调度中心
 * [plan-a-executor-demo(调度中心方案一执行器demo)](/plan-a-executor-demo)
     
     方案一的demo,与dubbo结合
+     1. 注册到zk中
+     2. 注册到分布式调度中心admin
 
 * [plan-b-executor-demo(调度中心方案二执行器demo)](/plan-b-executor-demo)
     
     方案二的demo,需要在各模块单独写自己的执行器注册到任务调度中心
-    
- 
+     1. 注册到分布式调度中心admin 
+
+--- 
  使用方法:
    1. 创建调度中心相关表数据
    2. 启动调度中心xxl-job-admin
