@@ -38,7 +38,7 @@ smzc任务调度中心
           ![image](https://github.com/Y-zd/smzc-job/blob/master/doc/images/job-manager.png)
 
         以运行模式为BEAN的配置为例子：JobHandler中填写 executor 中 @JobHandler(value = "demoJobHandler") value值
-```
+```java
      @JobHandler(value = "demoJobHandler")
      @Component
      public class DemoJobHandler extends IJobHandler {
