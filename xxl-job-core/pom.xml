@@ -5,7 +5,7 @@
     <parent>
         <artifactId>job</artifactId>
         <groupId>com.smzc.job</groupId>
-        <version>2.0-SNAPSHOT</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>xxl-job-core</artifactId>
@@ -48,6 +48,16 @@
         </dependency>
 
     </dependencies>
+
+
+    <!--自动上传jar包到nexus-->
+    <distributionManagement>
+        <repository>
+            <id>nexus-snapshots</id>
+            <name>Nexus smzc-snapshots</name>
+            <url>http://192.168.3.100:8888/nexus/content/repositories/snapshots/</url>
+        </repository>
+    </distributionManagement>
 
 
 </project>

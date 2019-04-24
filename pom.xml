@@ -7,7 +7,7 @@
     <groupId>com.smzc.job</groupId>
     <artifactId>job</artifactId>
     <packaging>pom</packaging>
-    <version>2.0-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
 
     <modules>
         <module>xxl-job-core</module>
@@ -94,6 +94,15 @@
             </properties>
         </profile>
     </profiles>
+
+    <!--自动上传jar包到nexus-->
+    <distributionManagement>
+        <repository>
+            <id>nexus-snapshots</id>
+            <name>Nexus smzc-snapshots</name>
+            <url>http://192.168.3.100:8888/nexus/content/repositories/snapshots/</url>
+        </repository>
+    </distributionManagement>
 
 
 </project>
