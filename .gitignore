@@ -9,7 +9,6 @@
 *.class
 classes/
 bin/
-log/
 .settings/
 .idea/
 target/
