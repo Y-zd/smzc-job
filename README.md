@@ -1,6 +1,7 @@
 smzc任务调度中心
 ==
 
+[技术选型参考文章](https://www.expectfly.com/2017/08/15/%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E6%96%B9%E6%A1%88%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B/)<br>
 [xxl-job官方文档](http://www.xuxueli.com/xxl-job/)
 ---
 
